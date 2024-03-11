@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C355B30C2B9EF8620093E69C /* WordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355B30B2B9EF8620093E69C /* WordItem.swift */; };
+		C355B30F2B9EF9230093E69C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355B30E2B9EF9230093E69C /* ModelData.swift */; };
+		C355B3132B9EFCE50093E69C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355B3122B9EFCE50093E69C /* DictionaryManager.swift */; };
 		C388397F2B9EEEFD0053D34D /* DictionaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388397E2B9EEEFD0053D34D /* DictionaryApp.swift */; };
-		C38839812B9EEEFD0053D34D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38839802B9EEEFD0053D34D /* ContentView.swift */; };
+		C38839812B9EEEFD0053D34D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38839802B9EEEFD0053D34D /* HomeView.swift */; };
 		C38839832B9EEEFE0053D34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38839822B9EEEFE0053D34D /* Assets.xcassets */; };
 		C38839872B9EEEFE0053D34D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38839862B9EEEFE0053D34D /* Preview Assets.xcassets */; };
 		C38839912B9EEEFE0053D34D /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38839902B9EEEFE0053D34D /* DictionaryTests.swift */; };
@@ -34,9 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C355B30B2B9EF8620093E69C /* WordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordItem.swift; sourceTree = "<group>"; };
+		C355B30E2B9EF9230093E69C /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		C355B3102B9EF9CB0093E69C /* wordData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wordData.json; sourceTree = "<group>"; };
+		C355B3122B9EFCE50093E69C /* DictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryManager.swift; sourceTree = "<group>"; };
 		C388397B2B9EEEFD0053D34D /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C388397E2B9EEEFD0053D34D /* DictionaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryApp.swift; sourceTree = "<group>"; };
-		C38839802B9EEEFD0053D34D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C38839802B9EEEFD0053D34D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C38839822B9EEEFE0053D34D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38839842B9EEEFE0053D34D /* Dictionary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dictionary.entitlements; sourceTree = "<group>"; };
 		C38839862B9EEEFE0053D34D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,6 +79,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C355B30A2B9EF5090093E69C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C38839802B9EEEFD0053D34D /* HomeView.swift */,
+				C355B30B2B9EF8620093E69C /* WordItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C355B30D2B9EF9050093E69C /* ModelData */ = {
+			isa = PBXGroup;
+			children = (
+				C355B30E2B9EF9230093E69C /* ModelData.swift */,
+				C355B3102B9EF9CB0093E69C /* wordData.json */,
+			);
+			path = ModelData;
+			sourceTree = "<group>";
+		};
+		C355B3112B9EFCCC0093E69C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C355B3122B9EFCE50093E69C /* DictionaryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		C38839722B9EEEFD0053D34D = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +128,10 @@
 		C388397D2B9EEEFD0053D34D /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				C355B3112B9EFCCC0093E69C /* Managers */,
+				C355B30D2B9EF9050093E69C /* ModelData */,
+				C355B30A2B9EF5090093E69C /* Views */,
 				C388397E2B9EEEFD0053D34D /* DictionaryApp.swift */,
-				C38839802B9EEEFD0053D34D /* ContentView.swift */,
 				C38839822B9EEEFE0053D34D /* Assets.xcassets */,
 				C38839842B9EEEFE0053D34D /* Dictionary.entitlements */,
 				C38839852B9EEEFE0053D34D /* Preview Content */,
@@ -259,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C38839812B9EEEFD0053D34D /* ContentView.swift in Sources */,
+				C355B3132B9EFCE50093E69C /* DictionaryManager.swift in Sources */,
+				C38839812B9EEEFD0053D34D /* HomeView.swift in Sources */,
+				C355B30F2B9EF9230093E69C /* ModelData.swift in Sources */,
+				C355B30C2B9EF8620093E69C /* WordItem.swift in Sources */,
 				C388397F2B9EEEFD0053D34D /* DictionaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
