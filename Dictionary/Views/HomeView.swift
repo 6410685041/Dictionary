@@ -12,18 +12,22 @@ struct HomeView: View {
     @State var dictionaryManager = DictionaryManager()
     
     var body: some View {
-        VStack {
-            Text("Dictionary")
-                .font(.system(size: 30))
-                .bold()
-            TextField("", text: $word)
-                .padding()
-                .border(Color.blue, width: 4)
-            Button("Enter"){
+        NavigationView{
+            VStack {
+                Text("Dictionary")
+                    .font(.system(size: 30))
+                    .bold()
+                TextField("", text: $word)
+                    .padding()
+                    .border(Color.blue, width: 4)
+                NavigationLink("Enter") {
+                    WordItemView(searchWord: word)
+                }
+                .disabled(word.isEmpty)
                 
             }
+            .padding()
         }
-        .padding()
     }
 }
 

@@ -7,16 +7,43 @@
 
 import SwiftUI
 
-struct WordItem: View {
-    @State var word: ResponseBody
+struct WordItemView: View {
+    let searchWord: String
+    @StateObject private var viewModel = DictionaryViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if viewModel.isLoading {
+                ProgressView()
+            } else {
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                } else {
+                    Text(viewModel.word)
+                        .font(.title)
+                    
+                    Text(viewModel.phonetic)
+                        .font(.subheadline)
+                        .padding()
+                    
+                    Text(viewModel.origin)
+                    
+                    ScrollView {
+                        Text(viewModel.definitions)
+                            .padding()
+                    }
+                }
+            }
+        }
+        .onAppear {
+            viewModel.fetchWordDetails(word: searchWord)
+        }
     }
 }
 
-struct WordItem_Previews: PreviewProvider {
-    static var previews: some View {
-        WordItem(word: previewWord)
-    }
+#Preview {
+    WordItemView(
+        searchWord: "example"
+    )
 }
