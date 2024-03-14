@@ -10,8 +10,7 @@ import Foundation
 class DictionaryViewModel: ObservableObject {
     @Published var word: String = ""
     @Published var phonetic: String = ""
-    @Published var definitions: String = ""
-    @Published var origin: String = ""
+    @Published var definitions: [Definition] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
@@ -23,6 +22,7 @@ class DictionaryViewModel: ObservableObject {
 
         Task {
             do {                
+                print(word)
                 let details = try await dictionaryManager.getword(word: word)
 
                 DispatchQueue.main.async {
@@ -30,15 +30,10 @@ class DictionaryViewModel: ObservableObject {
                     self.word = details.first?.word ?? "Not found"
                     self.phonetic = details.first?.phonetics.first?.text ?? "No phonetic available"
                     
-                    var definitionsText = ""
                     for meaning in details.first?.meanings ?? [] {
-                        definitionsText += "\(meaning.partOfSpeech):\n"
-                        for definition in meaning.definitions {
-                            definitionsText += "- \(definition.definition)\n"
-                        }
+                        let newDefinition = Definition(partOfSpeech: meaning.partOfSpeech, definitions: meaning.definitions.map { $0.definition })
+                        self.definitions.append(newDefinition)
                     }
-                    self.definitions = definitionsText
-                    self.origin = details.first?.origin ?? "No Origin"
                 }
             } catch {
                 DispatchQueue.main.async {
@@ -47,5 +42,36 @@ class DictionaryViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    
+    
+}
+
+class Definition: Identifiable {
+    @Published var partOfSpeech: String=""
+    @Published var definitions: [String]=[]
+    
+    init(partOfSpeech: String, definitions: [String]) {
+        self.partOfSpeech = partOfSpeech
+        self.definitions = definitions
+    }
+    
+    func setDefinition(_ definition: String) {
+        self.definitions.append(definition)
+    }
+    
+    func setPartOfSpeech(_ partOfSpeech: String) {
+        self.partOfSpeech = partOfSpeech
+    }
+    
+    func getDefinition() -> String {
+        var allDefinitionsText = ""
+        
+        for definition in definitions {
+            allDefinitionsText += "   - \(definition)\n"
+        }
+        
+        return allDefinitionsText
     }
 }

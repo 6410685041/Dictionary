@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C355B30C2B9EF8620093E69C /* WordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355B30B2B9EF8620093E69C /* WordItem.swift */; };
+		C34A245A2BA1F436001FCF10 /* WordItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A24592BA1F436001FCF10 /* WordItemView.swift */; };
 		C355B3132B9EFCE50093E69C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355B3122B9EFCE50093E69C /* DictionaryManager.swift */; };
 		C355B3152BA00AF80093E69C /* DictionaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355B3142BA00AF80093E69C /* DictionaryViewModel.swift */; };
 		C388397F2B9EEEFD0053D34D /* DictionaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388397E2B9EEEFD0053D34D /* DictionaryApp.swift */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C355B30B2B9EF8620093E69C /* WordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordItem.swift; sourceTree = "<group>"; };
+		C34A24592BA1F436001FCF10 /* WordItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordItemView.swift; sourceTree = "<group>"; };
 		C355B3122B9EFCE50093E69C /* DictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryManager.swift; sourceTree = "<group>"; };
 		C355B3142BA00AF80093E69C /* DictionaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewModel.swift; sourceTree = "<group>"; };
 		C388397B2B9EEEFD0053D34D /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				C38839802B9EEEFD0053D34D /* HomeView.swift */,
-				C355B30B2B9EF8620093E69C /* WordItem.swift */,
 				C355B3142BA00AF80093E69C /* DictionaryViewModel.swift */,
+				C34A24592BA1F436001FCF10 /* WordItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,8 +287,8 @@
 				C355B3152BA00AF80093E69C /* DictionaryViewModel.swift in Sources */,
 				C355B3132B9EFCE50093E69C /* DictionaryManager.swift in Sources */,
 				C38839812B9EEEFD0053D34D /* HomeView.swift in Sources */,
-				C355B30C2B9EF8620093E69C /* WordItem.swift in Sources */,
 				C388397F2B9EEEFD0053D34D /* DictionaryApp.swift in Sources */,
+				C34A245A2BA1F436001FCF10 /* WordItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
