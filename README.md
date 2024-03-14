@@ -32,4 +32,4 @@ Student ID: 6410685041
 
 ### Video
 
-[Click here](images/Demo_Clip.mov)
+[Click here](https://drive.google.com/file/d/1II3MUyPUwEcAX4cUvdeBXL03wmZH2SVs/view?usp=sharing)
